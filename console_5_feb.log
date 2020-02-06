@@ -1,0 +1,261 @@
+var demo = 12;
+undefined
+undefined
+undefined
+typeof(demo);
+"number"
+typeof demo;
+"number"
+typeof demo
+"number"
+demo = "Vikrant";
+"Vikrant"
+typeof demo
+"string"
+demo
+"Vikrant"
+demo = 12;
+12
+typeof demo
+"number"
+typeof typeof demo
+"string"
+typeof(typeof(demo))
+"string"
+demo = true;
+true
+true+true
+2
+demo = 12;
+12
+typeof demo;
+"number"
+demo.toString();
+"12"
+demo
+12
+demo1 = "13";
+"13"
+demo +demo1
+"1213"
+parseInt(demo1);
+13
+parseInt(demo1)+demo;
+25
+demo1= "13.45";
+"13.45"
+parseInt(demo1);
+13
+parseFloat(demo1);
+13.45
+23+34;
+57
+demo = "Vikrant";
+"Vikrant"
+demo[0];
+"V"
+demo.length;
+7
+for(var i=0;i<demo.length;i++){
+    console.log(demo[i]);
+}
+VM1520:2 V
+VM1520:2 i
+VM1520:2 k
+VM1520:2 r
+VM1520:2 a
+VM1520:2 n
+VM1520:2 t
+undefined
+//for-of loop
+for(var item of demo){
+    console.log(item);
+}
+
+
+
+VM1669:3 V
+VM1669:3 i
+VM1669:3 k
+VM1669:3 r
+VM1669:3 a
+VM1669:3 n
+VM1669:3 t
+undefined
+demo.charAt();
+
+
+
+"V"
+demo.charAt(3);
+
+
+
+"r"
+demo.charAt(23);
+
+
+
+""
+demo.charCodeAt();
+86
+demo.charCodeAt(4);
+97
+demo.concat(' singh');
+"Vikrant singh"
+demo
+"Vikrant"
+'gdkfjl'
+"gdkfjl"
+'gdkfjl
+klfjgslkd'
+VM2006:1 Uncaught SyntaxError: Invalid or unexpected token
+`dfjlgkjsdf
+fdksjgklsfd
+dlkfgjsdflk
+12345`
+"dfjlgkjsdf
+fdksjgklsfd
+dlkfgjsdflk
+12345"
+demo1 = parseInt(demo1);
+13
+demo1
+13
+console.log('Value of Demo1 is '+demo1);
+VM2249:1 Value of Demo1 is 13
+undefined
+console.log('Value of Demo1 is ',demo1);
+VM2280:1 Value of Demo1 is  13
+undefined
+console.log(`Value of Demo1 is ${demo1}`);
+VM2340:1 Value of Demo1 is 13
+undefined
+console.log(demo1,demo);
+VM2469:1 13 "Vikrant"
+undefined
+console.log(12,345,"Virkant",true);
+VM2605:1 12 345 "Virkant" true
+undefined
+demo.includes();
+false
+demo.includes('V');
+true
+demo.includes('k');
+true
+demo.includes('krant');
+true
+demo.includes('krawnt');
+false
+demo.toLowerCase();
+"vikrant"
+demo.toUpperCase();
+"VIKRANT"
+demo
+"Vikrant"
+demo.indexOf();
+-1
+demo.indexOf('V');
+0
+demo.indexOf('k');
+2
+demo.indexOf('k');
+2
+demo.indexOf('krant');
+2
+demo.indexOf('krawnt');
+-1
+demo = "Vikrant Vik";
+"Vikrant Vik"
+demo.lastIndexOf('V')
+8
+demo.length;
+11
+demo = "Vikrant Vik Vik";
+"Vikrant Vik Vik"
+demo.length;
+15
+demo.lastIndexOf('V')
+12
+demo = "   Vikrant Vik Vik    ";
+"   Vikrant Vik Vik    "
+demo.trim();
+"Vikrant Vik Vik"
+var password = "Vikrant @123";
+undefined
+password.includes('Vikrant@123');
+false
+password.substr(0,3);
+"Vik"
+password.substring(0,3);
+"Vik"
+arr = 34;
+34
+typeof arr;
+"number"
+arr = [12,32,true,"Vikrant"];
+(4) [12, 32, true, "Vikrant"]
+arr[0];
+12
+arr[3];
+"Vikrant"
+arr.push(100);
+5
+arr
+(5) [12, 32, true, "Vikrant", 100]0: 121: 322: true3: "Vikrant"length: 4__proto__: Array(0)
+arr.pop();
+100
+arr.splice(2,1);
+[true]
+arr
+(3) [12, 32, "Vikrant"]
+for(var item of arr){
+    console.log(item);
+}
+VM4675:2 12
+VM4675:2 32
+VM4675:2 Vikrant
+undefined
+var obj = {
+    id : 101,
+    name : "Vikrant"
+};
+undefined
+obj
+{id: 101, name: "Vikrant"}
+obj.id
+101
+obj.name
+"Vikrant"
+obj['id']
+101
+obj['name'];
+"Vikrant"
+obj = {
+    id : 101,
+    name : "Vikrant"
+};
+{id: 101, name: "Vikrant"}
+//for-in loop
+for(var key in obj){
+    console.log(key);
+}
+VM5240:3 id
+VM5240:3 name
+undefined
+//for-in loop
+for(var key in obj){
+    console.log(key,obj.key);
+}
+VM5284:3 id undefined
+VM5284:3 name undefined
+undefined
+//for-in loop
+for(var key in obj){
+    console.log(key,obj[key]);
+}
+VM5324:3 id 101
+VM5324:3 name Vikrant
+undefined
+obj['id'];
+101
