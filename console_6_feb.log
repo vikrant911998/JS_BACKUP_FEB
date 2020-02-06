@@ -1,0 +1,437 @@
+alert('This is an Alert Box');
+undefined
+alert('This is an Alert Box');
+undefined
+prompt('Enter a Value');
+
+"23"
+var temp = prompt('Enter a Value');
+
+console.log('Value = ',temp);
+
+VM1037:3 Value =  34
+undefined
+//function Declaration Style
+//function Expression Style or Anonymous Style
+//Arrow Function
+undefined
+//function Declaration Style
+
+
+function demo(var e){
+   console.log('Function Declaration ',e); 
+}
+VM1839:4 Uncaught SyntaxError: Unexpected token 'var'
+//function Declaration Style
+
+
+function demo(e){
+   console.log('Function Declaration ',e); 
+}
+undefined
+demo(23);
+VM1866:5 Function Declaration  23
+undefined
+demo("Vikrant");
+VM1866:5 Function Declaration  Vikrant
+undefined
+demo(true);
+VM1866:5 Function Declaration  true
+undefined
+//Function Expression Style
+
+var demo = function(e){
+    console.log('Function Expression Style ',e);
+}
+undefined
+demo
+ƒ (e){
+    console.log('Function Expression Style ',e);
+}
+demo(23);
+VM2322:4 Function Expression Style  23
+undefined
+function add(a,b){
+    console.log(a+b);
+}
+undefined
+add(2,3);
+VM2523:2 5
+undefined
+var demo = function(a,b){
+    console.log(a+b);
+}
+undefined
+demo(34,2)
+VM2639:2 36
+undefined
+//Arrow Function
+
+var demo = (a,b)=>console.log(a+b);
+undefined
+demo(2,3);
+VM2776:3 5
+undefined
+//Arrow Function
+
+var demo = (a,b)=>{
+    console.log(a+b);
+
+}
+undefined
+demo(2,3);
+VM2857:4 5
+undefined
+
+var demo = (a,b)=>{
+    return (a+b);
+}
+undefined
+demo(2,3);
+5
+//Arrow Function
+
+var demo = (a,b)=>a+b;
+undefined
+demo(23,4);
+27
+function add(a,b){
+    console.log(a+b);
+}
+undefined
+add(23,1);
+VM3255:2 24
+undefined
+add();
+VM3255:2 NaN
+undefined
+function add(a,b){
+    console.log('Function Declaration');
+}
+undefined
+add(23,1);
+VM3364:2 Function Declaration
+undefined
+add();
+VM3364:2 Function Declaration
+undefined
+function add(a,b){
+    console.log('Function Declaration ',a,b);
+}
+undefined
+add(2,3);
+VM3518:2 Function Declaration  2 3
+undefined
+add(2);
+VM3518:2 Function Declaration  2 undefined
+undefined
+add();
+VM3518:2 Function Declaration  undefined undefined
+undefined
+console.dir(add);
+VM3664:1 ƒ add(a,b)length: 2name: "add"arguments: nullcaller: nullprototype: {constructor: ƒ}__proto__: ƒ ()[[FunctionLocation]]: VM3518:1[[Scopes]]: Scopes[1]
+undefined
+function add(a,b){
+    console.log('Function Declaration ',a,b);
+    console.log(arguments);
+}
+undefined
+add(2,3);
+VM3798:2 Function Declaration  2 3
+VM3798:3 Arguments(2) [2, 3, callee: ƒ, Symbol(Symbol.iterator): ƒ]0: 21: 3length: 2callee: ƒ add(a,b)Symbol(Symbol.iterator): ƒ values()__proto__: Object
+undefined
+var add = function(){
+    console.log(arguments);
+}
+undefined
+add();
+VM4061:2 Arguments [callee: ƒ, Symbol(Symbol.iterator): ƒ]
+undefined
+add(23,3);
+VM4061:2 Arguments(2) [23, 3, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+undefined
+var add = function(){
+    console.log(arguments);
+    for(var item of arguments){
+        console.log(arguments[i]);
+    }
+    
+}
+undefined
+add();
+VM4333:2 Arguments [callee: ƒ, Symbol(Symbol.iterator): ƒ]
+undefined
+add(2,3);
+VM4333:2 Arguments(2) [2, 3, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+VM4333:4 Uncaught ReferenceError: i is not defined
+    at add (<anonymous>:4:31)
+    at <anonymous>:1:1
+add @ VM4333:4
+(anonymous) @ VM4378:1
+var add = function(){
+    console.log(arguments);
+    for(var item of arguments){
+        console.log(item);
+    }
+    
+}
+undefined
+add(2,3);
+VM4448:2 Arguments(2) [2, 3, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+VM4448:4 2
+VM4448:4 3
+undefined
+add(2,3,4);
+VM4448:2 Arguments(3) [2, 3, 4, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+VM4448:4 2
+VM4448:4 3
+VM4448:4 4
+undefined
+var add = function(){
+    var sum = 0;
+    console.log(arguments);
+    for(var item of arguments){
+        sum += item;
+    }
+    
+    console.log(');
+}
+VM4634:8 Uncaught SyntaxError: Invalid or unexpected token
+var add = function(){
+    var sum = 0;
+    console.log(arguments);
+    for(var item of arguments){
+        sum += item;
+    }
+    
+    console.log('Item = ',sum);
+}
+undefined
+add();
+VM4707:3 Arguments [callee: ƒ, Symbol(Symbol.iterator): ƒ]
+VM4707:8 Item =  0
+undefined
+add(23,23);
+VM4707:3 Arguments(2) [23, 23, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+VM4707:8 Item =  46
+undefined
+var add = function(){
+    var sum = 0;
+//     console.log(arguments);
+    for(var item of arguments){
+
+        if(typeof item == 'string'){
+            sum += parseInt(item);
+        }
+        else{
+            sum += item;
+        }
+        
+    }
+    
+    console.log('Item = ',sum);
+}
+undefined
+add(2,3,"4");
+VM5112:15 Item =  9
+undefined
+arr = [];
+[]
+typeof arr;
+"object"
+var add = function(){
+    var sum = 0;
+//     console.log(arguments);
+    for(var item of arguments){
+
+        if(typeof item == 'string'){
+            sum += parseInt(item);
+        }
+        else if( typeof item == 'object'){
+            for(var element of item){
+                sum += element;
+            }
+        }
+        else{
+            sum += item;
+        }
+        
+    }
+    
+    console.log('TOTAL SUM = ',sum);
+}
+undefined
+add(2,4,"3",[2,3]);
+VM5510:20 TOTAL SUM =  14
+undefined
+//vikrantsingh ->VikrantSingh
+undefined
+function format(str){
+    var firstItem = str[0];
+
+    var formattedName = firstItem.toUppercase();
+    formattedName += str.substr(1) ;
+    console.log('Name = ',formattedName);
+}
+
+format("Vikrant");
+VM6288:4 Uncaught TypeError: firstItem.toUppercase is not a function
+    at format (<anonymous>:4:35)
+    at <anonymous>:9:1
+format @ VM6288:4
+(anonymous) @ VM6288:9
+function format(str){
+    var firstItem = str[0];
+
+    var formattedName = firstItem.toUpperCase();
+    formattedName += str.substr(1) ;
+    console.log('Name = ',formattedName);
+}
+
+format("Vikrant");
+VM6341:6 Name =  Vikrant
+undefined
+function format(str){
+    var firstItem = str[0];
+
+    var formattedName = firstItem.toUpperCase();
+    formattedName += str.substr(1) ;
+    console.log('Name = ',formattedName);
+}
+
+format("vikrant");
+VM6353:6 Name =  Vikrant
+undefined
+//Nested Function ->FUnctional Programming
+
+function Outer(){
+    
+    function first(){
+        console.log('This is First Function');
+    }
+
+    function second(){
+        console.log('This is Second Function');
+    }
+
+    return first;
+}
+undefined
+var temp = Outer();
+undefined
+temp
+ƒ first(){
+        console.log('This is First Function');
+    }
+temp();
+VM6828:6 This is First Function
+undefined
+//Nested Function ->FUnctional Programming
+
+function Outer(){
+    
+    function first(){
+        console.log('This is First Function');
+    }
+
+    function second(){
+        console.log('This is Second Function');
+    }
+
+    return [first,second];
+}
+undefined
+var temp = Outer();
+undefined
+temp
+(2) [ƒ, ƒ]0: ƒ first()1: ƒ second()length: 2__proto__: Array(0)
+temp[0];
+ƒ first(){
+        console.log('This is First Function');
+    }
+temp[1];
+ƒ second(){
+        console.log('This is Second Function');
+    }
+temp[1]();
+VM6967:10 This is Second Function
+undefined
+temp[0]();
+VM6967:6 This is First Function
+undefined
+temp();
+VM7109:1 Uncaught TypeError: temp is not a function
+    at <anonymous>:1:1
+(anonymous) @ VM7109:1
+"Vikrant".substr(0)
+"Vikrant"
+"Vikrant".substr(1)
+"ikrant"
+"Vikrant".substr(1,5);
+"ikran"
+//Nested Function ->FUnctional Programming
+
+function Outer(){
+    
+    function first(){
+        console.log('This is First Function');
+    }
+
+    function second(){
+        console.log('This is Second Function');
+    }
+
+    return {f1:first,f2:second};
+}
+undefined
+temp = Outer();
+{f1: ƒ, f2: ƒ}f1: ƒ first()length: 0name: "first"arguments: nullcaller: nullprototype: {constructor: ƒ}__proto__: ƒ ()[[FunctionLocation]]: VM7356:5[[Scopes]]: Scopes[1]f2: ƒ second()__proto__: Object
+temp.f1();
+VM7356:6 This is First Function
+undefined
+temp.f2();
+VM7356:10 This is Second Function
+undefined
+temp.f2;
+ƒ second(){
+        console.log('This is Second Function');
+    }
+//Nested Function ->FUnctional Programming
+
+function Outer(){
+    
+    function first(){
+        console.log('This is First Function');
+    }
+
+    function second(){
+        console.log('This is Second Function');
+    }
+
+    return {first,second};
+}\
+VM7588:14 Uncaught SyntaxError: Invalid or unexpected token
+//Nested Function ->FUnctional Programming
+
+function Outer(){
+    
+    function first(){
+        console.log('This is First Function');
+    }
+
+    function second(){
+        console.log('This is Second Function');
+    }
+
+    return {first,second};
+}
+undefined
+temp = Outer();
+{first: ƒ, second: ƒ}first: ƒ first()second: ƒ second()__proto__: Object
+temp.first
+ƒ first(){
+        console.log('This is First Function');
+    }
+temp.first();
+VM7603:6 This is First Function
+undefined
