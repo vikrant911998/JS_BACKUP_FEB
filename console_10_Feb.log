@@ -1,0 +1,89 @@
+function print(){
+    console.log('Print Function Called..');
+}
+
+arr = [12,23,2,4,5,67];
+
+arr.forEach(print);
+VM9654:2 Print Function Called..
+VM9654:2 Print Function Called..
+VM9654:2 Print Function Called..
+VM9654:2 Print Function Called..
+VM9654:2 Print Function Called..
+VM9654:2 Print Function Called..
+undefined
+function Outer(){
+
+    function add(a,b){
+        console.log(a+b);
+    }
+
+    function sub(a,b){
+        console.log(a-b);
+    }
+
+    return {add,sub};
+}
+
+temp = Outer();
+{add: ƒ, sub: ƒ}
+temp.add(12,3);
+VM9964:4 15
+undefined
+function Outer(a,b){
+
+    function add(){
+        console.log(a+b);
+    }
+
+    function sub(){
+        console.log(a-b);
+    }
+
+    return {add,sub};
+}
+
+temp = Outer();
+{add: ƒ, sub: ƒ}
+function Outer(a,b){
+
+    function add(){
+        console.log(a+b);
+    }
+
+    function sub(){
+        console.log(a-b);
+    }
+
+    return {add,sub};
+}
+
+temp = Outer(12,3);
+{add: ƒ, sub: ƒ}
+temp.add();
+VM10129:4 15
+undefined
+temp.sub();
+VM10129:8 9
+undefined
+//IIFE(Immediate Invoke Function Expression)
+
+(function(str){
+    console.log(str);
+})();
+VM10824:4 undefined
+undefined
+//IIFE(Immediate Invoke Function Expression)
+
+(function(str){
+    console.log(str);
+})(23);
+VM10850:4 23
+undefined
+
+
+(function(str){
+    console.log(str,arguments);
+})(23,34,56,true,'Hello');
+VM10966:4 23 Arguments(5) [23, 34, 56, true, "Hello", callee: ƒ, Symbol(Symbol.iterator): ƒ]
+undefined
